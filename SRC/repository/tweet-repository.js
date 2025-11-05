@@ -32,16 +32,6 @@ class TweetRepository {
         }
     }
 
-    // Update tweet by ID
-    async updateTweet(id, updateData) {
-        try {
-            return await Tweet.findByIdAndUpdate(id, updateData, { new: true });
-        } catch (error) {
-            console.error("Error updating tweet:", error);
-            throw new Error("Failed to update tweet");
-        }
-    }
-
     // Delete tweet by ID
     async deleteTweet(id) {
         try {
